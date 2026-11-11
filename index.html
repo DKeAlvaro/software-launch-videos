@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Los vídeos de lanzamiento que funcionaron · nov 2026</title>
+<meta name="description" content="Nueve lanzamientos de software con sus números: Dropbox, Apple 1984, Slack, Notion 3.0, Cursor 2.0, Base44, Lovable, Humane. Qué tienen en común y qué no.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a0b; --panel:#111113; --panel2:#151517; --line:#26262a;
+  --ink:#f3efe6; --mut:#9b968c; --dim:#6f6b64;
+  --acc:#ff6a3d; --grn:#9fe3a8; --blu:#8fb8ff;
+  --serif:"Instrument Serif",Georgia,serif;
+  --sans:Inter,system-ui,-apple-system,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 var(--sans);-webkit-font-smoothing:antialiased;position:relative}
+body:before{content:"";position:fixed;inset:0;background:radial-gradient(760px 380px at 26% -6%,rgba(255,106,61,.11),transparent 68%);pointer-events:none;z-index:0}
+main{max-width:1020px;margin:0 auto;padding:0 22px 90px;position:relative;z-index:1}
+a{color:var(--ink);text-decoration-color:var(--dim);text-underline-offset:3px}
+a:hover{text-decoration-color:var(--acc)}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* hero */
+.hero{padding:72px 0 40px;border-bottom:1px solid var(--line);position:relative}
+.eyebrow{font:500 11.5px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mut);display:flex;gap:10px;align-items:center}
+.eyebrow i{width:6px;height:6px;background:var(--acc);border-radius:50%;display:inline-block}
+h1{font:400 clamp(38px,7vw,72px)/1.02 var(--serif);letter-spacing:-.015em;margin:22px 0 20px;max-width:16ch}
+h1 em{font-style:italic;color:var(--acc)}
+.lede{font-size:clamp(17px,2.2vw,20px);line-height:1.55;color:#cdc7bb;max-width:62ch;margin:0}
+.lede b{color:var(--ink);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:36px 0 0}
+.stat{background:var(--bg);padding:14px 16px}
+.stat b{display:block;font:500 22px/1.1 var(--mono);color:var(--ink);letter-spacing:-.02em}
+.stat span{display:block;font-size:12px;color:var(--mut);margin-top:6px;line-height:1.35}
+
+/* sections */
+section{margin-top:74px}
+h2{font:400 clamp(28px,4.4vw,42px)/1.1 var(--serif);letter-spacing:-.01em;margin:0 0 10px}
+.sub{color:var(--mut);font-size:15px;max-width:66ch;margin:0 0 28px}
+h3{font:600 15px/1.3 var(--sans);margin:0}
+
+/* families */
+.fam{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.fam article{background:var(--panel);border:1px solid var(--line);padding:20px 18px 22px;position:relative}
+.fam .n{font:500 11px/1 var(--mono);color:var(--dim);letter-spacing:.12em}
+.fam h3{margin:12px 0 8px;font:400 24px/1.15 var(--serif)}
+.fam p{margin:0;font-size:14.5px;color:#c3bdb2;line-height:1.55}
+.fam .who{margin-top:14px;font:500 11.5px/1.4 var(--mono);color:var(--mut);letter-spacing:.02em}
+.fam article:nth-child(1){border-top:2px solid var(--grn)}
+.fam article:nth-child(2){border-top:2px solid var(--blu)}
+.fam article:nth-child(3){border-top:2px solid var(--acc)}
+
+/* map */
+.mapbox{background:var(--panel);border:1px solid var(--line);padding:24px 22px 18px}
+.map{position:relative;aspect-ratio:16/10;border-left:1px solid #34343a;border-bottom:1px solid #34343a;margin:0 8px 44px 30px}
+.map .q{position:absolute;font:500 10.5px/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#4d4d54;max-width:13ch}
+.map .q.tl{top:10px;left:12px}
+.map .q.tr{top:10px;right:12px;text-align:right}
+.map .q.bl{bottom:10px;left:12px}
+.map .q.br{bottom:10px;right:12px;text-align:right}
+.map .h{position:absolute;left:0;right:0;top:50%;border-top:1px dashed #2b2b30}
+.map .v{position:absolute;top:0;bottom:0;left:50%;border-left:1px dashed #2b2b30}
+.dot{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:7px;width:0}
+.dot i{width:9px;height:9px;border-radius:50%;background:var(--ink);box-shadow:0 0 0 4px rgba(243,239,230,.06);display:block}
+.dot span{font:500 11px/1.2 var(--mono);color:#b9b3a8;white-space:nowrap;letter-spacing:.01em}
+.dot.s i{background:var(--grn)}
+.dot.c i{background:var(--blu)}
+.dot.f i{background:var(--acc)}
+.axl{font:500 10.5px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+.axx{display:flex;justify-content:space-between;margin:0 8px 0 30px}
+.cap{font-size:13px;color:var(--mut);margin:14px 0 0;max-width:70ch}
+.mapm{display:none;gap:10px}
+.mapm div{border:1px solid var(--line);padding:14px}
+.mapm b{display:block;font:500 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mut);margin-bottom:8px}
+.mapm p{margin:0;font-size:14px;color:#c3bdb2}
+
+/* cases */
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.case{background:var(--panel);border:1px solid var(--line);padding:18px 17px 16px;display:flex;flex-direction:column}
+.case .top{display:flex;justify-content:space-between;gap:8px 10px;align-items:baseline;flex-wrap:wrap}
+.case .name{font:600 15px/1.2 var(--sans)}
+.case .meta{font:400 10.5px/1.2 var(--mono);color:var(--dim);text-align:right;letter-spacing:.02em;margin-left:auto}
+.case .big{font:500 27px/1.1 var(--mono);letter-spacing:-.03em;margin:14px 0 2px;color:var(--ink)}
+.case .big.ph{font:italic 400 25px/1.2 var(--serif);letter-spacing:-.01em;margin-top:12px;white-space:normal}
+.case .big small{display:block;font:400 10.5px/1.3 var(--mono);color:var(--dim);letter-spacing:.04em;margin-top:7px;text-transform:uppercase}
+.case p{font-size:14px;line-height:1.55;color:#c3bdb2;margin:12px 0 0}
+.case .lesson{font-size:13px;line-height:1.5;color:var(--ink);border-top:1px solid var(--line);margin:14px 0 0;padding-top:12px}
+.case .lesson b{color:var(--acc);font-weight:600;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:5px}
+.case.bad{border-color:#3a2320;background:#140f0e}
+.case.bad .big{color:#ff8f6f}
+
+/* patterns */
+ol.pat{list-style:none;counter-reset:p;margin:0;padding:0;border-top:1px solid var(--line)}
+ol.pat li{counter-increment:p;display:grid;grid-template-columns:64px 1fr;gap:8px;padding:22px 0;border-bottom:1px solid var(--line)}
+ol.pat li:before{content:"0" counter(p);font:400 30px/1 var(--serif);color:var(--dim);grid-row:1/3}
+ol.pat h3{font:400 21px/1.25 var(--serif);margin:0 0 5px}
+ol.pat p{margin:0;font-size:14.5px;color:#c3bdb2;max-width:70ch;line-height:1.55}
+ol.pat b{color:var(--ink);font-weight:600}
+
+/* limits */
+.limits{background:#0f0f11;border:1px solid var(--line);border-left:2px solid var(--acc);padding:22px}
+.limits h2{font-size:26px;margin-bottom:14px}
+.limits ul{margin:0;padding:0;list-style:none;display:grid;gap:12px}
+.limits li{font-size:14.5px;color:#c3bdb2;padding-left:20px;position:relative;line-height:1.55}
+.limits li:before{content:"—";position:absolute;left:0;color:var(--acc)}
+
+/* flowlet */
+.fl{background:linear-gradient(180deg,#101012,#0d0d0f);border:1px solid var(--line);padding:28px 26px}
+.fl .tag{font:500 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--grn)}
+.fl h2{margin:14px 0 12px}
+.fl p.big{font-size:16.5px;color:#cdc7bb;max-width:72ch;margin:0 0 8px;line-height:1.6}
+.fl p.big b{color:var(--ink)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:26px}
+.cols h4{font:500 11px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;margin:0 0 14px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.cols h4.keep{color:var(--grn)}
+.cols h4.rev{color:var(--acc)}
+.cols ul{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.cols li{font-size:14.5px;line-height:1.55;color:#c3bdb2;padding-left:18px;position:relative}
+.cols li:before{position:absolute;left:0;font-family:var(--mono);font-size:12px}
+.cols .keep li:before{content:"+";color:var(--grn)}
+.cols .rev li:before{content:"!";color:var(--acc)}
+.cols li b{color:var(--ink);font-weight:600}
+.fl .more{margin-top:26px;padding-top:20px;border-top:1px solid var(--line)}
+.fl .more h4{font:500 11px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin:0 0 12px}
+.fl .more p{margin:0;font-size:14.5px;color:#c3bdb2;line-height:1.6}
+.fl .more p+p{margin-top:10px}
+
+/* footer */
+footer{margin-top:80px;border-top:1px solid var(--line);padding-top:26px;display:grid;grid-template-columns:1.1fr 1fr;gap:30px}
+footer h5{font:500 10.5px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin:0 0 12px}
+footer ol{margin:0;padding-left:20px;font-size:12.5px;color:var(--mut);line-height:1.6}
+footer li{margin-bottom:5px}
+footer .sig{font-size:12.5px;color:var(--dim);line-height:1.7}
+footer .sig b{color:var(--mut);font-weight:500}
+
+@media (max-width:860px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .fam,.cases{grid-template-columns:1fr 1fr}
+  .cols{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  main{padding:0 16px 64px}
+  .hero{padding:48px 0 30px}
+  h1{max-width:none}
+  .fam,.cases{grid-template-columns:1fr}
+  .mapbox{display:none}
+  .mapm{display:grid}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat b{font-size:19px}
+  ol.pat li{grid-template-columns:44px 1fr;padding:18px 0}
+  ol.pat li:before{font-size:22px}
+  footer{grid-template-columns:1fr;gap:24px}
+  .fl{padding:22px 18px}
+}
+</style>
+</head>
+<body>
+<main>
+
+<header class="hero">
+  <div class="eyebrow"><i></i>Investigación · 11 nov 2026 · 9 casos</div>
+  <h1>Los vídeos de lanzamiento que <em>funcionaron</em></h1>
+  <p class="lede">No ganan los que mejor se ven. Ganan los que hacen que el producto parezca inevitable: <b>el resultado antes del segundo cinco</b>, un solo trabajo por vídeo y una frase que se puede repetir en voz alta. Tres familias, nueve casos y lo que se repite en todos.</p>
+  <div class="stats">
+    <div class="stat"><b>3.976</b><span>lanzamientos catalogados y analizados por animatiQ</span></div>
+    <div class="stat"><b>5.058M</b><span>vistas acumuladas en ese catálogo</span></div>
+    <div class="stat"><b>15,8M</b><span>el más visto de esta página: Notion 3.0 en YouTube</span></div>
+    <div class="stat"><b>5.000&nbsp;→&nbsp;75.000</b><span>la lista de espera de Dropbox en un día</span></div>
+  </div>
+</header>
+
+<section id="familias">
+  <h2>Tres familias, tres trabajos distintos</h2>
+  <p class="sub">Casi todo lo que se llama «vídeo de lanzamiento» hace una de estas tres cosas. Confundirlas es el error más caro: se rueda una película cuando hacía falta una captura de pantalla.</p>
+  <div class="fam">
+    <article>
+      <div class="n">01</div>
+      <h3>La demo que explica</h3>
+      <p>Producción mínima, claridad máxima. Funciona cuando la categoría no existe o el producto es difícil de contar: el vídeo no vende, hace entender. Es el formato más barato y el que más veces ha salvado un lanzamiento.</p>
+      <div class="who">Dropbox · Slack · Superhuman</div>
+    </article>
+    <article>
+      <div class="n">02</div>
+      <h3>El lanzamiento como contenido</h3>
+      <p>30–90 segundos, interfaz real, ritmo de feed, a menudo sin voz. Funciona cuando ya hay audiencia o presupuesto de anuncios. Es el formato dominante en 2026 y el que se copia sin tener ninguna de las dos cosas.</p>
+      <div class="who">Notion 3.0 · Cursor 2.0 · Base44 · Lovable</div>
+    </article>
+    <article>
+      <div class="n">03</div>
+      <h3>La película que crea la categoría</h3>
+      <p>Mundo propio, un villano y una promesa que va más allá del producto. Funciona una vez por década y solo si el producto cumple lo que el vídeo promete. Cuando no cumple, la factura es proporcional a lo bien que estaba rodado.</p>
+      <div class="who">Apple «1984» · Humane AI Pin</div>
+    </article>
+  </div>
+</section>
+
+<section id="mapa">
+  <h2>Dónde cae cada vídeo</h2>
+  <p class="sub">Dos ejes que no son el presupuesto: cuánto enseña el producto y cuánta audiencia hay detrás. La posición la decide quién te conoce, no lo que te gustaría rodar.</p>
+  <div class="mapbox">
+    <div class="map">
+      <div class="h"></div><div class="v"></div>
+      <div class="q tl">Explica<br>nadie te conoce</div>
+      <div class="q tr">Compra atención<br>nadie te conoce</div>
+      <div class="q bl">Confirma<br>ya te esperan</div>
+      <div class="q br">Celebra<br>ya te esperan</div>
+      <div class="dot s" style="left:14%;top:24%"><i></i><span>Dropbox</span></div>
+      <div class="dot s" style="left:34%;top:34%"><i></i><span>Slack</span></div>
+      <div class="dot c" style="left:70%;top:14%"><i></i><span>Base44</span></div>
+      <div class="dot f" style="left:84%;top:26%"><i></i><span>Apple 1984</span></div>
+      <div class="dot f" style="left:90%;top:42%"><i></i><span>Humane</span></div>
+      <div class="dot c" style="left:12%;top:58%"><i></i><span>Superhuman</span></div>
+      <div class="dot c" style="left:26%;top:74%"><i></i><span>Cursor 2.0</span></div>
+      <div class="dot c" style="left:42%;top:88%"><i></i><span>Linear Reviews</span></div>
+      <div class="dot s" style="left:56%;top:80%"><i></i><span>Lovable</span></div>
+      <div class="dot s" style="left:70%;top:64%"><i></i><span>Notion 3.0</span></div>
+    </div>
+    <div class="axx"><span class="axl">Grabación de pantalla</span><span class="axl">Cine</span></div>
+    <p class="cap">Casi todos los lanzamientos de software empiezan arriba a la izquierda. El error habitual es rodar como si estuvieras abajo: el vídeo de una empresa que nadie conoce, con la gramática de una que ya es esperada.</p>
+  </div>
+  <div class="mapm">
+    <div><b>Arriba izquierda · explica</b><p>Nadie te conoce, producción mínima. El vídeo tiene que hacer entender el producto. Dropbox.</p></div>
+    <div><b>Arriba derecha · compra atención</b><p>Nadie te conoce, producción de cine. El vídeo paga la atención y la promesa tiene que cumplirse. Apple 1984, Base44, Humane.</p></div>
+    <div><b>Abajo izquierda · confirma</b><p>Ya te esperan, producción mínima. Basta con enseñar el producto y no estorbar. Cursor, Superhuman, Linear.</p></div>
+    <div><b>Abajo derecha · celebra</b><p>Ya te esperan, producción de cine. El vídeo premia la fidelidad. Notion 3.0, Lovable.</p></div>
+  </div>
+</section>
+
+<section id="casos">
+  <h2>Nueve vídeos y lo que consiguió cada uno</h2>
+  <p class="sub">Vistas de YouTube el 11 de noviembre de 2026. Duraciones, las del vídeo original. El resto de cifras, en las fuentes del pie.</p>
+
+  <div class="cases">
+    <article class="case">
+      <div class="top"><span class="name">Dropbox</span><span class="meta">2007–08 · ~3 min</span></div>
+      <div class="big">5.000 → 75.000<small>personas en lista de espera</small></div>
+      <p>Drew Houston grabó su propia pantalla con una voz tranquila y enseñó el único momento que importaba: arrastras un archivo en un ordenador y aparece en el otro. Sin casting, sin música, sin logo animado.</p>
+      <div class="lesson"><b>Por qué funcionó</b>Si el producto es difícil de explicar, el vídeo no es marketing: es el producto.</div>
+    </article>
+
+    <article class="case">
+      <div class="top"><span class="name">Apple «1984»</span><span class="meta">1984 · 60 s</span></div>
+      <div class="big">$370.000<small>coste del anuncio · una sola emisión</small></div>
+      <p>Ridley Scott, un Gran Hermano que es IBM, una atleta con un martillo y tres segundos de Macintosh al final. La junta de Apple la odió antes de que se emitiera, una sola vez, en la Super Bowl XVIII.</p>
+      <div class="lesson"><b>Por qué funcionó</b>Con un enemigo claro no hace falta explicar el producto. Sin enemigo, sí.</div>
+    </article>
+
+    <article class="case">
+      <div class="top"><span class="name">Slack</span><span class="meta">«So yeah, we tried Slack»</span></div>
+      <div class="big ph">Un testimonio inventado<small>cero clientes reales en cámara</small></div>
+      <p>Un equipo que no existe cuenta cómo trabajaba antes y cómo trabaja ahora. Slack no tenía clientes que poner en cámara, así que se inventó el testimonio: todo el vídeo es el después.</p>
+      <div class="lesson"><b>Por qué funcionó</b>El after-state se puede actuar. Lo que no se puede es pedirle al espectador que se lo imagine.</div>
+    </article>
+
+    <article class="case">
+      <div class="top"><span class="name">Superhuman</span><span class="meta">«Introducing Superhuman»</span></div>
+      <div class="big ph">El corte es la promesa<small>la velocidad se edita, no se dice</small></div>
+      <p>La promesa era velocidad, y el montaje la encarna: cortes y movimiento de interfaz al mismo ritmo al que responde el producto. No dice «somos rápidos»; va rápido.</p>
+      <div class="lesson"><b>Por qué funcionó</b>Si tu ventaja es una sensación, el vídeo tiene que producirla, no describirla.</div>
+    </article>
+
+    <article class="case">
+      <div class="top"><span class="name">Notion 3.0</span><span class="meta">1:30 · sin voz</span></div>
+      <div class="big">15,8M<small>vistas en YouTube</small></div>
+      <p>Ni una palabra hablada. Música, interfaz y texto en pantalla: le pides una tarea a un agente y ves cómo aparecen páginas y bases de datos. Funciona en mudo, en cualquier idioma y en cualquier feed.</p>
+      <div class="lesson"><b>Por qué funcionó</b>Si la interfaz es el argumento, la voz solo estorba. Y el vídeo se vuelve traducible sin doblaje.</div>
+    </article>
+
+    <article class="case">
+      <div class="top"><span class="name">Cursor 2.0</span><span class="meta">1:04 · 10 escenas</span></div>
+      <div class="big">9,5M<small>vistas en YouTube</small></div>
+      <p>Captura de pantalla y una contención deliberada, casi sin adornos. Para un público de desarrolladores que desconfía del hype, el lujo es no vender.</p>
+      <div class="lesson"><b>Por qué funcionó</b>El tono también es segmentación: a un dev no le convences con épica.</div>
+    </article>
+
+    <article class="case">
+      <div class="top"><span class="name">Base44</span><span class="meta">0:52 · anuncio</span></div>
+      <div class="big">8,1M<small>vistas en YouTube</small></div>
+      <p>Estructura de anuncio, pero la mayor parte del metraje es el producto real construyendo cosas, con planos de naturaleza que lo separan de cualquier otro anuncio de SaaS. Corría como anuncio de YouTube: el formato incluía la distribución.</p>
+      <div class="lesson"><b>Por qué funcionó</b>Un buen vídeo acelera un producto que la gente ya quiere. No sustituye a ese producto.</div>
+    </article>
+
+    <article class="case">
+      <div class="top"><span class="name">Lovable</span><span class="meta">1:28 · fundadores</span></div>
+      <div class="big">4,3M<small>vistas en YouTube</small></div>
+      <p>Abre con los fundadores en cámara diciéndole a quién va dirigido y qué va a conseguir. Después, demo. Es la estructura más antigua del oficio y la que mejor convierte en frío.</p>
+      <div class="lesson"><b>Por qué funcionó</b>«Esto es para ti» en los primeros cinco segundos compra el resto del vídeo.</div>
+    </article>
+
+    <article class="case bad">
+      <div class="top"><span class="name">Humane AI Pin</span><span class="meta">2023 · «película»</span></div>
+      <div class="big">10.000 / 100.000<small>unidades vendidas · devoluciones &gt; compras</small></div>
+      <p>El vídeo prometía una vida sin pantallas: elegante, tranquila, con un proyector en la palma. El producto se calentaba, tardaba y casi todo lo que enseñaba el vídeo fallaba en la mano. En febrero de 2025 HP compró la empresa por 116 millones y el Pin se apagó.</p>
+      <div class="lesson"><b>Qué pasó</b>Un vídeo puede adelantar al producto un año. La factura llega igual.</div>
+    </article>
+  </div>
+</section>
+
+<section id="patrones">
+  <h2>Lo que se repite</h2>
+  <p class="sub">Seis cosas que se repiten en los nueve, incluido el que fracasó. La última es la que más se ignora.</p>
+  <ol class="pat">
+    <li><h3>El resultado antes del segundo cinco</h3><p>Cursor abre con la interfaz, Base44 con lo que construye, Lovable con la promesa. La excepción es <b>1984</b>, que se permite 57 segundos de mundo porque tiene un villano: el producto aparece tres segundos y basta.</p></li>
+    <li><h3>Un trabajo por vídeo</h3><p><b>Linear for Agents</b> dura 33 segundos y enseña una sola cosa. <b>Contra</b>, 48 segundos y un caso de uso. Las listas de features se ven, no se cuentan: si necesitas cinco, son cinco vídeos.</p></li>
+    <li><h3>La frase se puede decir en voz alta</h3><p>«Mil canciones en tu bolsillo». «Think diff». «Tú asignas las tareas. Tus agentes hacen el trabajo». Si la tesis no cabe en una frase, no cabe en 42 segundos.</p></li>
+    <li><h3>El silencio es una decisión de distribución</h3><p>Notion, Cursor y Linear no llevan voz. Se ven en mudo, en cualquier idioma, sin subtítulos, en cualquier feed. Con voz hace falta una razón: una cara, un chiste o una historia.</p></li>
+    <li><h3>El vídeo no arregla el producto</h3><p><b>Glass</b> y <b>Humane</b> son la prueba. Cuanto mejor está rodado el vídeo, más caro sale el desencanto: la gente perdona un producto mal presentado, no una promesa incumplida.</p></li>
+    <li><h3>La distribución se diseña con el vídeo</h3><p>Dropbox lo subió a Hacker News y Digg. Base44 lo compró como anuncio. Notion lo puso delante de gente que ya tenía Notion. Mismo formato, tres distribuciones distintas, tres resultados distintos.</p></li>
+  </ol>
+</section>
+
+<section class="limits">
+  <h2>Lo que estas cifras no dicen</h2>
+  <ul>
+    <li>Las vistas no son personas. Un anuncio puede sumar millones sin que nadie recuerde el producto: Notion 3.0 y Base44 no compiten en la misma liga aunque sus números se parezcan, uno los ganó con su audiencia y el otro los compró.</li>
+    <li>Solo estás viendo a los que ganaron. Por cada Base44 hay cientos de vídeos igual de buenos que nadie vio, y este análisis no los cuenta.</li>
+    <li>Ningún número mide retención. Un vídeo puede ser un éxito y el producto un desastre (Humane), o una grabación de pantalla puede valer más que una película (Dropbox).</li>
+  </ul>
+</section>
+
+<section class="fl" id="flowlet">
+  <div class="tag">Para el corte de 42 s</div>
+  <h2>Qué haría con esto</h2>
+  <p class="big">El corte actual copia <b>Linear Reviews</b>: 25 segundos, 411.000 vistas, hook de 9,2/10, 7,2 cortes por minuto. Pero ese vídeo es un teaser para gente que ya sabía qué era Linear: abre con un macro de código y no explica nada. Flowlet llega a un feed donde casi nadie lo conoce. El formato se puede copiar; la audiencia no.</p>
+
+  <div class="cols">
+    <div>
+      <h4 class="keep">Mantendría</h4>
+      <ul>
+        <li><b>La tesis como antes/después.</b> «It types every word. Flowlet writes what you meant» es el patrón exacto que gana: dos estados, una frase, sujeto explícito.</li>
+        <li><b>La voz.</b> En frío, una voz humana compra atención que la interfaz sola no compra. Notion puede permitirse el silencio porque su audiencia ya está; un lanzamiento desde cero, no.</li>
+        <li><b>La brevedad.</b> 42 segundos está en la banda de los que funcionan (30–60). Los teasers de 17–25 segundos solo funcionan con audiencia ganada.</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="rev">Revisaría</h4>
+      <ul>
+        <li><b>El CRT antes que el resultado.</b> Los primeros segundos son el ramble dentro del CRT; para quien no conoce Flowlet, el chasis retro puede leerse como un anuncio de una tele. Base44 y Lovable enseñan el resultado en los dos primeros segundos.</li>
+        <li><b>La letra sincronizada premia la reescucha.</b> Rockit cantando la tesis es un gran recurso de contenido, pero el vídeo tiene que entenderse en mudo, sin conocer la canción, a la primera.</li>
+        <li><b>Copiar el formato sin la distribución.</b> Linear lo publicó a gente que esperaba la feature. Si el corte sale a un feed frío, necesita el contexto que Linear no necesitaba: qué es, para quién y qué cambia.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="more">
+    <h4>Dos entregables que faltan</h4>
+    <p><b>Un corte de 15 s solo-demo</b> para LinkedIn y X, sin CRT: micrófono, texto limpio, logo. Es el que va a enseñar el producto a quien no te sigue; el de 42 s se lo enseña a quien ya entró.</p>
+    <p><b>Un loop mudo de 6 s</b> para el hero de useflowlet.com. Los lanzamientos que salen en cuatro formatos o más acumulan del orden de 3,4 veces más tiempo visto que los de un solo formato, y el loop es el que casi nadie hace.</p>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <h5>Fuentes</h5>
+    <ol>
+      <li><a href="https://animatiq.ai/launch-directory/linear-reviews">animatiQ · breakdown de Linear Reviews</a> (duración, hook 9,2, cortes/min) y <a href="https://animatiq.ai/launch-directory">el directorio</a>: 3.976 lanzamientos, 5.058M vistas.</li>
+      <li><a href="https://hound-studio.com/blog/22-best-product-launch-videos-2026-examples-formulas/">Hound Studio · 22 best product launch videos</a> (estructuras, duraciones y vistas de Notion, Cursor, Base44, Lovable, ElevenLabs).</li>
+      <li><a href="https://www.flowjam.com/blog/30-best-launch-video-examples-checklist">Flowjam · 30 best launch video examples</a> (benchmarks de formato y el dato de 3,4×).</li>
+      <li><a href="https://videngineer.com/teardowns/launch/slack-so-yeah-we-tried-slack/">VidEngineer · teardown de Slack</a> y <a href="https://videngineer.com/teardowns/launch/superhuman-introducing-superhuman/">Superhuman</a>.</li>
+      <li><a href="https://en.wikipedia.org/wiki/1984_(advertisement)">Wikipedia · «1984»</a> (presupuesto, emisión única, reacción de la junta).</li>
+      <li><a href="https://en.wikipedia.org/wiki/Humane_AI_Pin">Wikipedia · Humane Inc.</a> (10.000 unidades, devoluciones, venta a HP).</li>
+      <li><a href="https://mvpdevelopment.company/blog/dropbox-mvp">MVP Development · Dropbox, dos vídeos</a> (el screencast de 2007 y el de la beta privada de 2008, que es el que disparó la lista).</li>
+    </ol>
+  </div>
+  <div>
+    <h5>Nota</h5>
+    <p class="sig">Vistas recogidas el <b>11 de noviembre de 2026</b> con la API pública de estadísticas de YouTube; cambian cada día. Las duraciones son las del corte original, no las de los reuploads. Donde no hay cifra pública fiable, no la hay: Slack y Superhuman se describen por lo que hacen, no por lo que midieron.<br><br>Página escrita para decidir el lanzamiento de Flowlet, no para hacer una lista.</p>
+  </div>
+</footer>
+
+</main>
+</body>
+</html>
